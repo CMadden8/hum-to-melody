@@ -1,0 +1,29 @@
+.venv/
+.downloads/
+Runtime/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.log
+*.wav
+*.flac
+*.mp3
+*.mid
+*.mp4
+/Recordings/
+/Cache/
+/State/
+/Exports/
+/Voices/
+/Character references/
+/Character profiles/
+/Export history/
+settings.json
+preferences.json
+last-session.json
+library.json
+
+
+/examples/
+!/demos/original-hum.wav
+!/demos/cello.wav

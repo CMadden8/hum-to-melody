@@ -1,0 +1,22 @@
+name: Windows tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    env:
+      QT_QPA_PLATFORM: offscreen
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          architecture: x64
+          cache: pip
+          cache-dependency-path: requirements.lock.txt
+      - name: Install Python packages and audio runtime
+        run: python scripts/setup_windows.py
+      - name: Test the app and audio engine
+        run: .\.venv\Scripts\python.exe -m pytest tests -q
