@@ -1,6 +1,6 @@
 # Hum to Tune
 
-[![Windows tests](https://github.com/CMadden8/hum-to-melody/actions/workflows/windows.yml/badge.svg)](https://github.com/CMadden8/hum-to-melody/actions/workflows/windows.yml)
+[![Windows tests](https://github.com/CMadden8/hum-to-tune/actions/workflows/windows.yml/badge.svg)](https://github.com/CMadden8/hum-to-tune/actions/workflows/windows.yml)
 
 Hum a tune into a microphone, choose an instrument and hear it play your notes. Tap a rhythm on a desk to make a percussion track. This local Windows app turns the pitch and timing of a human performance into MIDI and renders it with sampled instruments.
 
