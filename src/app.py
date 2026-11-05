@@ -34,6 +34,7 @@ from engine import DRUMS, INSTRUMENTS, MAX_SECONDS, Note, SAMPLE_RATE, export_mi
 from game_library import SoundLibrary, load_library_path
 
 APP = Path(__file__).resolve().parent
+# Keep the existing storage and instance identifiers so upgrades retain saved takes.
 DATA = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "LocalAudioTools" / "Hum to Melody"
 ROOT = DATA
 CACHE = ROOT / "cache"
@@ -184,7 +185,7 @@ class Waveform(QWidget):
 class HumToMusic(QMainWindow):
     def __init__(self, restore=True):
         super().__init__()
-        self.setWindowTitle("Hum to Melody")
+        self.setWindowTitle("Hum to Tune")
         self.setWindowIcon(QIcon(str(APP / "icon.svg")))
         self.resize(790, 875)
         self.setMinimumSize(670, 650)
@@ -243,7 +244,7 @@ class HumToMusic(QMainWindow):
         layout = QVBoxLayout(page)
         layout.setContentsMargins(34, 28, 34, 22)
         layout.setSpacing(18)
-        title = QLabel("Hum to Melody")
+        title = QLabel("Hum to Tune")
         title.setObjectName("title")
         layout.addWidget(title)
         subtitle = QLabel("Hum a tune or tap a rhythm. Choose a sound. Hear it back.")
@@ -757,7 +758,7 @@ class HumToMusic(QMainWindow):
                 raise OSError("File Explorer could not open the Sounds folder")
         except OSError:
             LOG.exception("Could not open the Sounds library")
-            self._error("I couldn't open your Sounds folder. Your recordings are still safe in Hum to Melody.")
+            self._error("I couldn't open your Sounds folder. Your recordings are still safe in Hum to Tune.")
 
     def _mirror_saved(self, files):
         try:
@@ -991,7 +992,7 @@ def main():
     parser.add_argument("--fresh", action="store_true")
     args = parser.parse_args()
     app = QApplication(sys.argv[:1])
-    app.setApplicationName("Hum to Melody")
+    app.setApplicationName("Hum to Tune")
     app.setOrganizationName("HumToMusic")
     app.setStyle("Fusion")
     app.setStyleSheet(STYLE)

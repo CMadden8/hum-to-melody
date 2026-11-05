@@ -1,4 +1,4 @@
-"""Local signal processing and sample playback for Hum to Melody.
+"""Local signal processing and sample playback for Hum to Tune.
 
 The unmodified pYIN Vamp plugin and FluidSynth do the musical processing.
 Neither the Sonic Visualiser nor LMMS application is launched by this module.

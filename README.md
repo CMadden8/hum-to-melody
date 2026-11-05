@@ -1,4 +1,4 @@
-# Hum to Melody
+# Hum to Tune
 
 [![Windows tests](https://github.com/CMadden8/hum-to-melody/actions/workflows/windows.yml/badge.svg)](https://github.com/CMadden8/hum-to-melody/actions/workflows/windows.yml)
 
@@ -6,7 +6,7 @@ Hum a tune into a microphone, choose an instrument and hear it play your notes. 
 
 **Listen to one take** — [original hum · 7.4 s](demos/original-hum.wav?raw=true) · [cello · 9.0 s](demos/cello.wav?raw=true)
 
-![Hum to Melody with a transcribed melody and Cello selected](docs/app.png)
+![Hum to Tune with a transcribed melody and Cello selected](docs/app.png)
 
 ## Run on Windows
 
@@ -26,6 +26,8 @@ Click **Try an example** to hear a twelve-note test melody without a microphone.
 1. Press **Record sound**, hum one melody, then press **Stop recording**. For a beat, tap instead and leave the recording type on **Automatic**, or select **Taps / percussion**.
 2. Choose **Cello**, a piano, another instrument or a drum. Instrument changes replay the same detected notes or hits. Adjust octave, playback speed and reverb to taste.
 3. Use **Save…** for instrument WAV, original WAV or MIDI. **Both audio files** puts the original and instrument audio side by side in the folder you choose. The default sound library is under `Music\Hum to Melody`. Sessions and automatic recordings live in `%LOCALAPPDATA%\LocalAudioTools\Hum to Melody`.
+
+Previously called **Hum to Melody**, the app keeps its existing storage folder names so the rename preserves recordings, settings and session restoration.
 
 ## How it works
 
